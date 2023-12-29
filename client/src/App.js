@@ -1,22 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Get from './component/Get';
-import Update from './component/Update';
-import Post from './component/Post';
-import Delete from './component/Delete';
-import Navbar from './component/Navbar';
+import React from 'react';
+import './App.css';
+import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Get />} />
-          <Route path="/delete" element={<Delete />} />
-          <Route path="/post" element={<Post />} />
-          <Route path="/update" element={<Update />} />
-        </Routes>
-      </Router>
+    <div className="App">
+      <h1>MERN Stack CRUD with Redux</h1>
+      <TodoForm />
+      <TodoList />
     </div>
   );
 }
